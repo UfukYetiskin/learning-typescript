@@ -50,3 +50,7 @@ TypeScript’in üç temel bileşeni vardır.
 ECMAScript, betik dili standartıdır ve her yıl yeni sürümü çıkarılmaktadır. 2019 yılı itibariyle 10 sürümü bulunmaktadır. TypeScript dili EcmaScript standartları üzerine inşa edilmiştir ve bu standartlarda yer alan özelliklere ek özellikler katarak yazılım geliştiricileri daha sağlıklı şekilde JavaScript kodları üretmesini sağlamaktadır. TypeScript EcmaScript’in 5 ve 6 versiyonlarınaa ekstra özellikler eklenerek oluşturulmuştur. Tarayıcılar EcmaScript 6. versiyona tam olarak destek verememektedir. TS desteklenmeyen kısımları 5. versiyona dönüştürerek işleme sokar.
 
 [Kaynak](https://devnot.com/2019/typescript-nedir/) Devnot
+
+#### How can compiler TypeScript
+
+Terminal üzerinden ```tsc <dosyaadi.ts>``` komutunu yazarak compiler edilir. Bu sayede bize *.js* uzantılı bir dosya oluşturacaktır.
