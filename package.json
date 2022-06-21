@@ -1,0 +1,20 @@
+{
+  "name": "learning-typescript",
+  "version": "1.0.0",
+  "description": "This project was created to learn typescript. The topics learned will be added to the project along with the examples. It will serve as a notebook for myself and I will remove the questions in my mind in my daily life from here.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Uyetiskin/learning-typescript.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Uyetiskin/learning-typescript/issues"
+  },
+  "homepage": "https://github.com/Uyetiskin/learning-typescript#readme"
+}
