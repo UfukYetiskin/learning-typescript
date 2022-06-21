@@ -54,3 +54,20 @@ ECMAScript, betik dili standartıdır ve her yıl yeni sürümü çıkarılmakta
 #### How can compiler TypeScript
 
 Terminal üzerinden ```tsc <dosyaadi.ts>``` komutunu yazarak compiler edilir. Bu sayede bize *.js* uzantılı bir dosya oluşturacaktır.
+
+##### tsconfig.json
+
+Bu dosyada TypeScript'i nasıl çalıştıracağımızı belirleriz.
+
+```
+{
+    "compilerOptions": {
+        "lib" : ["ESNext", "DOM"],
+        "strict": false,
+        "module": "CommonJS",
+        "allowJs": false
+    }
+}
+```
+Yukarıdaki örnekte compiler edilirken hangi kütüphaneleri kullanacağını belirtiriz. ESNext ile son sürüm olan EcmaScript kullanılır. DOM ile de html etiketlerini kullanabilir hale getiririz. Strict ile değişkenlerin type'lerı istenir. allowJs ise TypeScript içerisinde JavaScript kullanmamızı sağlar. *target* ile projenin hangi dile derlenmesini belirtebiliriz.
+

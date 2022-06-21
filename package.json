@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/Uyetiskin/learning-typescript/issues"
   },
-  "homepage": "https://github.com/Uyetiskin/learning-typescript#readme"
+  "homepage": "https://github.com/Uyetiskin/learning-typescript#readme",
+  "devDependencies": {
+    "@types/node": "^18.0.0"
+  }
 }

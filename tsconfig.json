@@ -1,5 +1,11 @@
 {
     "compilerOptions": {
-        "lib" : ["ESNext"]
+        "lib" : ["ESNext"],
+        "strict": false,
+        "module": "CommonJS",
+        "moduleResolution": "Node",
+        "esModuleInterop": false,
+        "target": "ES6"
+
     }
 }
