@@ -115,3 +115,15 @@ const family = {
 const myMap = new Map<number, string>()
 //myMap.set(key, value)
 myMap.set(1, 'Yetişkin' )
+
+//or
+
+type PersonMap = Map<number, Person>;
+
+const myMap2 : PersonMap = new Map()
+
+myMap2.set(2, {
+    isim: 'Vahap',
+    soyisim : 'Yetişkin',
+    gender : 'male'
+})
