@@ -55,3 +55,63 @@ writeName('Ümmühan', 10);
 
 
 // ---------  Tip İsimlendirme | Type Aliasing ---------- 
+
+type Person = {
+    isim : string;
+    soyisim  : string;
+    yas ?: number; //? işareti ile tanımlanmamızın sebebi bunun opsiyonel olarak değer verilebilir olması. Person type'ını referans alan obje isteğe bağlı bu değerleri verir.
+    gender ?: string; //? işareti ile tanımlanmamızın sebebi bunun opsiyonel olarak değer verilebilir olması. Person type'ını referans alan obje isteğe bağlı bu değerleri verir.
+}
+
+const obj : Person = {
+    isim : 'Deniz',
+    soyisim : 'Yetişkin', //isim ve soyisim property'leri zorunlu olduğu için tanımlandı. ama diğer özellikler opsiyonel
+    gender : 'Female' ,
+}
+
+type Color  = 'Blue' | 'Red' | 'Green' //Color Type'ını kullıldığında bu 3 değerden biri kullanılabilir.
+type CustomColors = 'Black' | 'Yellow' | 'White'
+const myColor : Color = "Green" //burada bize 3 değerden başka değer aldıramaz.
+
+const colorArr : Color[] = [
+    'Blue', 'Green', 'Red'
+]
+//or
+//Her iki type'ı da kullanabiliriz. Örn
+const colorsArray : (Color |CustomColors)[] = ["Blue" , "Red", "Green", "Black", "Yellow", "White"]
+
+
+type allColors = Color | CustomColors //bu şekilde de 2 type kullanilabilir 
+
+const someColor : allColors[] = ['Blue', "Yellow"]
+
+type parents = {
+    isim : string,
+    who : string,
+    age : number
+}
+type child = {
+    name : string,
+    gender : string,
+    yas : number
+}
+
+type makeFamily = child & parents
+
+const family = {
+    isim : 'Vahap',
+    who : 'father',
+    age : 56,
+    name : 'Ufuk',
+    gender : 'male',
+    yas : 26
+
+} as makeFamily
+
+//Map()
+//Map'in kullanma nedeni object türünde bir değişken oluşturulurken özelliklere key vermek istersek kullanırız.
+
+
+const myMap = new Map<number, string>()
+//myMap.set(key, value)
+myMap.set(1, 'Yetişkin' )
