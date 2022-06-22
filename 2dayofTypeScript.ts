@@ -52,3 +52,6 @@ function writeName(isim : string, tekrar: number): void {
     }
 }
 writeName('Ümmühan', 10);
+
+
+// ---------  Tip İsimlendirme | Type Aliasing ---------- 
