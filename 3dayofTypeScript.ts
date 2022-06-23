@@ -57,3 +57,19 @@ type optionalObj = Partial<{
     isim : string;
     yas : string;
 }>;
+
+
+//Object type oluşturulurken referans alacak object'de zorunlu özellikler dışında isteğe bağlı özellik eklemek istersek
+type optionalProperty = {
+    isim  : string,
+    age : number,
+    location : string,
+    [key: string] : any; //referans alan obje 3 özellik dışında istediği type' göre bir özellik ekleyebilir.
+}
+
+//Record type'ı ile object içerisindeki key'şn ve value'nun typelerini belirleriz.
+//Bu objede key'in string değer, value'nun da number değer olması isteniyor
+const recordObj : Record <string, number> = {
+    sira : 12,
+    yas : 26,
+} 
