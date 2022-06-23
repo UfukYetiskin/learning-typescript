@@ -35,3 +35,25 @@ export type Student = {
     no : number,
     campus : string
 }
+
+
+// ----- Object Types ----
+
+type objType = {
+    isim : string;
+    age : number;
+    location : string;
+}
+
+const obj : objType = {
+    isim : 'Ümmühan',
+    age : 23,
+    location : 'Aydın'
+}
+
+//Eğer bir type üretirken özelliklerin opsiyonel olmasını istiyorsak, bütün özelliklere soru işareti koymak yerine
+//optionalObj type'nı referans olarak kullanan objler için bu özellikler zorunluluk değiş opsiyonel olarak tanımlanmış olacaktır.
+type optionalObj = Partial<{
+    isim : string;
+    yas : string;
+}>;
