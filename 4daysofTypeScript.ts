@@ -70,3 +70,5 @@ function getBooks() : BookResponse {
         name : 'insan ne ile yaşar'
     }
 } 
+
+// ---- Classes ----- 
