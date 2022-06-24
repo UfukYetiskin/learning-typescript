@@ -72,3 +72,29 @@ function getBooks() : BookResponse {
 } 
 
 // ---- Classes ----- 
+//bu class default olarak publictir.
+class Student {
+    //# ile isim değişkeni private olur.
+    //#isim = 'ufuk'
+    isim : string;
+    soyad : string;
+    constructor(isim : string, soyad  :string){
+        this.isim = isim;
+        this.soyad = soyad;
+    }
+    yazdir(){
+        console.log(`isim: ${this.isim} soyad: ${this.soyad}`)
+    }
+}
+
+//or 
+
+class Deniz {
+
+    constructor(public isim : string, public soyad : string) {
+        
+    }
+    yazdir(){
+        console.log(`${isim} ${this.soyad}`)
+    }
+}
