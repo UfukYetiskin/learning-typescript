@@ -65,3 +65,43 @@ const father  : ExcludeFather = 55;
 
 
 // ------- Enum ----- 
+
+//Enum'lar bir data çeşididir.
+//enum objedir. Index sayıları artarak ilerler.
+//özelliklere sonradan bir atama yapılamaz
+enum Notification {
+    Success,
+    Error,
+    Warning,
+    Information,
+}
+
+//Eğer enum kullanılmasaydı düz obje olsaydı
+//function sendNotification(notificationType typeof keyof Notification){
+function sendNotification(notificationType : Notification){
+
+    switch(notificationType){
+        case Notification.Success: {
+            console.log('Succsessss')
+            break;
+        }
+        case Notification.Warning : {
+            console.log('Warning');
+            break;
+        }
+        case Notification.Error : {
+            console.log('Aman dikkat')
+            break;
+        }
+        case Notification.Information:{
+            console.log('Öğrende gel')
+            break;
+        }
+        default:
+            break;
+        
+    }
+
+}
+Notification.Information.valueOf() //ile Information özelliğinin değerini verir.
+sendNotification(Notification.Error) // Öğrende gel
