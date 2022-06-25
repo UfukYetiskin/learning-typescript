@@ -1,0 +1,2 @@
+// ---- Yardımcı Tipler |  Utility Types --------
+
