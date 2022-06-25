@@ -62,3 +62,6 @@ const uzay : Pick <Kisi, 'yas' | 'isim'> = { //yas tipi kullanılamaz oldu
 // Exclude, istenilen typeları yok saymayı sağlar
 type ExcludeFather = Exclude<string |number | boolean ,boolean>
 const father  : ExcludeFather = 55;
+
+
+// ------- Enum ----- 
