@@ -71,3 +71,21 @@ Bu dosyada TypeScript'i nasıl çalıştıracağımızı belirleriz.
 ```
 Yukarıdaki örnekte compiler edilirken hangi kütüphaneleri kullanacağını belirtiriz. ESNext ile son sürüm olan EcmaScript kullanılır. DOM ile de html etiketlerini kullanabilir hale getiririz. Strict ile değişkenlerin type'lerı istenir. allowJs ise TypeScript içerisinde JavaScript kullanmamızı sağlar. *target* ile projenin hangi dile derlenmesini belirtebiliriz.
 
+## Yedinci Gün
+
+Öncelikle TypeScript'i çalıştırmak veya render etmek için lite-server'ı kurduk. TypeScript'ı render etmek için **package.json** doyası içerisinde start komutunu ekledik. Bu sayede *npm start* komutunu kullarak  localhost/3000 portunu canlıya alıyoruz.
+
+```
+ "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "lite-server"
+```
+Ardından TypeScript doyasımızı JavaScript doyasına çevirmek ya da compile etmek için **tsc <dosya-adi>** komutunu kullandık. Ts dosyası içerisinde yaptığımız değişiklikler aynı anda render edilmediği için Ts dosyası içerisinde her yaptığımız değişiklikten sonra compile etmemiz gerekiyor. 
+
+Her değişiklikten sonra ts dosyasını compile etmek yerine **tsc app.ts -w** komutu ile süreklilik kazandırırz.
+
+**Sıralama şu şekilde;**
+
+- npm start
+- tsc app.ts -w
+
