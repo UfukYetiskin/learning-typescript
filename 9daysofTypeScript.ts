@@ -34,3 +34,16 @@ const carp = (a: number, b: number, c?: number ) => {
 }
 console.log(carp(3,3)) //9
 console.log(carp(3, 3, 3))//27
+
+
+//Function Overloading
+
+//Burada sum fonksiyonun parametrelerinin ya string ya da number değer alabileceğini belirtiyoruz
+function sum(a:number, b:number):number;
+function sum(a:string, b:string) : string;
+
+//yukarıda tanumlanmış sum fonksiyon ve değişken typelarından birinin geldiğinde değer döndürmesi için any verilir.
+function sum(a:any, b:any) : any{
+    return a + b
+}
+console.log(sum("Ufuk", "Gümüş"))

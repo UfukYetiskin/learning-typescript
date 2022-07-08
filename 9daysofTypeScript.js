@@ -27,3 +27,8 @@ var carp = function (a, b, c) {
 };
 console.log(carp(3, 3)); //9
 console.log(carp(3, 3, 3)); //27
+//yukarıda tanumlanmış sum fonksiyon ve değişken typelarından birinin geldiğinde değer döndürmesi için any verilir.
+function sum(a, b) {
+    return a + b;
+}
+console.log(sum("Ufuk", "Gümüş"));
