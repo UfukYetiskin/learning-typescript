@@ -17,3 +17,13 @@ function birlestir(ad, soyad, yas) {
     return ad + " " + soyad + " " + yas;
 }
 console.log(birlestir('Deniz', 'Yetişkin'));
+//Arrow Functions
+//c değişkeninin opsiyonel olduğunu belirttik. Eğer c'ye değer verirsek if koşuluna girer. 
+var carp = function (a, b, c) {
+    if (typeof c !== 'undefined') {
+        return a * b * c;
+    }
+    return a * b;
+};
+console.log(carp(3, 3)); //9
+console.log(carp(3, 3, 3)); //27
