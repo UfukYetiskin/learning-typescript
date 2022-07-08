@@ -47,3 +47,19 @@ function sum(a:any, b:any) : any{
     return a + b
 }
 console.log(sum("Ufuk", "Gümüş"))
+
+//Rest Parameters
+
+//Fonksiyona gönderilecek parametre sayısını bilmediğimiz zamanlarda kullanırız.
+function restFunc(...numbers : number[]):number{
+    let total = 0;
+    numbers.forEach((num) => total += num) 
+    return total
+}
+
+console.log(restFunc(1,2,3,4,5))
+
+const stringBirlestir = (message : string, ...names:string[]) => {
+    console.log(message + " " + names.join(', '))
+}
+stringBirlestir("Merhaba canım kızlarım ", "Deniz", "Artemis")

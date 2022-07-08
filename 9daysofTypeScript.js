@@ -32,3 +32,23 @@ function sum(a, b) {
     return a + b;
 }
 console.log(sum("Ufuk", "Gümüş"));
+//Rest Parameters
+//Fonksiyona gönderilecek parametre sayısını bilmediğimiz zamanlarda kullanırız.
+function restFunc() {
+    var numbers = [];
+    for (var _i = 0; _i < arguments.length; _i++) {
+        numbers[_i] = arguments[_i];
+    }
+    var total = 0;
+    numbers.forEach(function (num) { return total += num; });
+    return total;
+}
+console.log(restFunc(1, 2, 3, 4, 5));
+var stringBirlestir = function (message) {
+    var names = [];
+    for (var _i = 1; _i < arguments.length; _i++) {
+        names[_i - 1] = arguments[_i];
+    }
+    console.log(message + " " + names.join(', '));
+};
+stringBirlestir("Merhaba canım kızlarım ", "Deniz", "Artemis");
