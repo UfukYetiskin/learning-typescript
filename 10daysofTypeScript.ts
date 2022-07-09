@@ -2,7 +2,8 @@
 console.log('Classes')
 
 class Kisi{
-    public id: number;
+    public id: number; //default public
+    //readonly firstName : string; buradaki değer değiştirilemez
     firstName : string;
     lastName : string;
     constructor(id: number, firstName: string, lastName: string){
@@ -28,3 +29,5 @@ console.log(kisiBilgisi.getFullName())
 //Protected ile class içerisinde tanımlanmış özellikler sadece class içerisinde ve classı extends alan classlar içerisinde kullanılabilir.
 
 
+//----- Readonly
+//Class içerisindeki değere dışarıdan erişebiliyoruz fakat bu değeri dışarıdan değiştiremiyoruz.

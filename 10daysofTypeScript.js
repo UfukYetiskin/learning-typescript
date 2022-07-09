@@ -18,3 +18,5 @@ console.log(kisiBilgisi.getFullName());
 //Kisi class'ının özellikleri (id, firstName, lastName) varsayılan (default) olarak publictir. Publick olması sayesinde istediğimiz yerden o özelliği çekebiliyoruz.
 //Private, tanımlanılan değişken ya da özellik sadece tanımlandığı scope içerisinde kullanılabilir.
 //Protected ile class içerisinde tanımlanmış özellikler sadece class içerisinde ve classı extends alan classlar içerisinde kullanılabilir.
+//----- Readonly
+//Class içerisindeki değere dışarıdan erişebiliyoruz fakat bu değeri dışarıdan değiştiremiyoruz.
