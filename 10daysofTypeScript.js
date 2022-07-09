@@ -71,3 +71,37 @@ var objem = new Circle();
 var objem2 = new Circle();
 console.log(objem.pi); //3
 console.log(objem2.pi); //3
+// ----- Abstract Class 
+/*Abstract class, ortak özellikleri olan nesneleri bir çatı altında
+toplamak için kullanılır: Sınıfın önüne “abstract” sözcüğü yazılarak
+soyutlaştırma işlemi yapılır. Abstract sınıftan kalıtım almak için de
+“extends” kullanılır. */
+var Departmant = /** @class */ (function () {
+    function Departmant(name) {
+        this.name = name;
+    }
+    Departmant.prototype.printName = function () {
+        console.log('Department name: ' + this.name);
+    };
+    return Departmant;
+}());
+var AccountingDepartment = /** @class */ (function (_super) {
+    __extends(AccountingDepartment, _super);
+    function AccountingDepartment() {
+        return _super.call(this, "Accounting and Auditing") || this;
+    }
+    //Departmant class'ında abstract olarak tanımlandığı için burada kullanmamız zorunludur.
+    AccountingDepartment.prototype.printMeeting = function () {
+        console.log("The Accounting Department");
+    };
+    AccountingDepartment.prototype.printHello = function () {
+        console.log('Hello');
+    };
+    return AccountingDepartment;
+}(Departmant));
+//Abstract class'ın new instance'ı alınamaz. Bu yüzden extend edilmiş class'ın new intance'i alınır.
+//let department = new Departmemt()
+var department = new AccountingDepartment();
+department.printName();
+department.printMeeting();
+department.printHello();
