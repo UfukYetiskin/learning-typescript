@@ -31,3 +31,17 @@ console.log(kisiBilgisi.getFullName())
 
 //----- Readonly
 //Class içerisindeki değere dışarıdan erişebiliyoruz fakat bu değeri dışarıdan değiştiremiyoruz.
+
+
+//---- Inheritance
+
+//Employee class'ı child classtır. Kisi class'ından değerleri (id, firstName, lastName) initialize ediyoruz.
+class Employee extends Kisi{
+    constructor(id: number, firstName: string, lastName :string) {
+        super(id, firstName, lastName)
+    }
+}
+
+let emp = new Employee(1239123, "Ümmühan", "Yetişkin")
+console.log(emp)
+console.log(emp.getFullName())
