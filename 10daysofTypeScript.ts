@@ -45,3 +45,37 @@ class Employee extends Kisi{
 let emp = new Employee(1239123, "Ümmühan", "Yetişkin")
 console.log(emp)
 console.log(emp.getFullName())
+
+
+// --- Static Methods - Properties
+
+class Circle {
+    //static olarak tanımlanan pi değişkeni dışarıdan yeni bir değişken türetilmeden de çağırılabilir hale geliyor.
+    static pi : number = 3.14;
+
+    //burada tanımlanmış pi değişkenine erişmek için Circle class'ından yeni bir değişken türetmemiz gerekecektir.
+    pi = 3
+
+    constructor(){
+        //Circle classından türemiş her eleman alındığında pi 1 artacaktır.
+        this.pi++
+        
+        Circle.pi++
+    }
+    static hesapla(yaricap: number){
+        return this.pi * yaricap * yaricap
+    }
+
+}
+console.log(Circle.pi) //3.14 çıktısı alırız. Yeni bir değişken türetmeye gerke kalmaz static olarak tanımlandığı için
+
+console.log(Circle.hesapla(10)) //314
+
+let getPi = new Circle()
+console.log(getPi.pi) //3
+
+let objem = new Circle()
+let objem2 = new Circle()
+
+console.log(objem.pi) //3
+console.log(objem2.pi) //3

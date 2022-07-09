@@ -47,3 +47,27 @@ var Employee = /** @class */ (function (_super) {
 var emp = new Employee(1239123, "Ümmühan", "Yetişkin");
 console.log(emp);
 console.log(emp.getFullName());
+// --- Static Methods - Properties
+var Circle = /** @class */ (function () {
+    function Circle() {
+        //burada tanımlanmış pi değişkenine erişmek için Circle class'ından yeni bir değişken türetmemiz gerekecektir.
+        this.pi = 3;
+        //Circle classından türemiş her eleman alındığında pi 1 artacaktır.
+        this.pi++;
+        Circle.pi++;
+    }
+    Circle.hesapla = function (yaricap) {
+        return this.pi * yaricap * yaricap;
+    };
+    //static olarak tanımlanan pi değişkeni dışarıdan yeni bir değişken türetilmeden de çağırılabilir hale geliyor.
+    Circle.pi = 3.14;
+    return Circle;
+}());
+console.log(Circle.pi); //3.14 çıktısı alırız. Yeni bir değişken türetmeye gerke kalmaz static olarak tanımlandığı için
+console.log(Circle.hesapla(10)); //314
+var getPi = new Circle();
+console.log(getPi.pi); //3
+var objem = new Circle();
+var objem2 = new Circle();
+console.log(objem.pi); //3
+console.log(objem2.pi); //3
