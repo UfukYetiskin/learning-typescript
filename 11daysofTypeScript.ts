@@ -81,3 +81,53 @@ format = function (str : string, isUpper : boolean){
 }
 
 console.log(format('deniz', true))
+
+//Interface Extend Etme ve Bir class'a interface implement etme
+
+//Bir interface'i birden fazla interface'e extends edebilriiz. 
+
+interface IPerson {
+    name : string,
+    gender : string
+}
+
+interface IEmployee extends IPerson {
+    empNumber : number
+}
+
+interface IWorker  extends IPerson {
+    empDepartmet  :string
+}
+
+let isciOsman : IEmployee = {
+    name : 'Osman',
+    gender : 'male',
+    empNumber : 1212
+}
+
+console.log(isciOsman)
+
+let employeeDepartment : IWorker = {
+    empDepartmet : 'HR',
+    name : 'Hasan',
+    gender : 'Female',
+}
+console.log(employeeDepartment)
+
+//Class'a interface implemente etme
+
+//interface'te tanımlanılan bütün propertyler class içerisinde tekrar belirtilmeli
+class Firma  implements IPerson {
+    name : string;
+    gender : string; 
+    empNumber :number
+    constructor(empNumber : number , name : string, gender: string){
+        this.empNumber = empNumber
+        this.name = name
+        this.gender = gender
+    }
+}
+
+let isciVeysel = new Firma(12, 'Veyse', 'Male')
+console.log(isciVeysel) //Firma {empNumber: 12, name: 'Veyse', gender: 'Male'}
+

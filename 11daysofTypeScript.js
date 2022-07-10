@@ -43,3 +43,27 @@ format = function (str, isUpper) {
     return isUpper === true ? str.toLocaleUpperCase() : str.toLocaleLowerCase();
 };
 console.log(format('deniz', true));
+var isciOsman = {
+    name: 'Osman',
+    gender: 'male',
+    empNumber: 1212
+};
+console.log(isciOsman);
+var employeeDepartment = {
+    empDepartmet: 'HR',
+    name: 'Hasan',
+    gender: 'Female'
+};
+console.log(employeeDepartment);
+//Class'a interface implemente etme
+//interface'te tanımlanılan bütün propertyler class içerisinde tekrar belirtilmeli
+var Firma = /** @class */ (function () {
+    function Firma(empNumber, name, gender) {
+        this.empNumber = empNumber;
+        this.name = name;
+        this.gender = gender;
+    }
+    return Firma;
+}());
+var isciVeysel = new Firma(12, 'Veyse', 'Male');
+console.log(isciVeysel); //Firma {empNumber: 12, name: 'Veyse', gender: 'Male'}
