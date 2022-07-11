@@ -42,3 +42,17 @@ let booleans = [true , false, false, true, true]
 console.log(getRandomItem<string>(strings))
 console.log(getRandomItem(numbers))
 console.log(getRandomItem<boolean>(booleans))
+
+// --- Generic Constraints -----
+console.log('--- Generic Constraints -----')
+
+function merge<U extends object,V extends object>(obj1:U, obj2:V){
+    return{
+        ...obj1, 
+        ...obj2
+    }
+}
+let objs = merge(
+    {name : "Ufuk"}, 
+    {name : "Gümüş"})
+console.log(objs)
