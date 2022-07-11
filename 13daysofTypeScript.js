@@ -77,3 +77,38 @@ var list = new List();
 for (var i = 0; i < 10; i++) {
     list.add(i);
 }
+//Classlarda Generics Kullanımı
+var Stack = /** @class */ (function () {
+    function Stack(size) {
+        this.size = size;
+        this.elements = [];
+    }
+    Stack.prototype.isEmpty = function () {
+        return this.elements.length === 0;
+    };
+    Stack.prototype.isFull = function () {
+        return this.elements.length === this.size;
+    };
+    Stack.prototype.push = function (element) {
+        if (this.elements.length === this.size) {
+            throw new Error('The stack is overflow!');
+        }
+        this.elements.push(element);
+    };
+    Stack.prototype.pop = function () {
+        if (this.elements.length == 0) {
+            throw new Error('The stack is overflow!');
+        }
+        return this.elements.pop();
+    };
+    return Stack;
+}());
+function randBetween(low, high) {
+    return Math.floor(Math.random() * (high - low + 1) + low);
+}
+var numaralar = new Stack(5);
+while (!numaralar.isFull()) {
+    var n = randBetween(1, 10);
+    console.log("Push ".concat(n, " into the stack"));
+    numaralar.push(n);
+}
